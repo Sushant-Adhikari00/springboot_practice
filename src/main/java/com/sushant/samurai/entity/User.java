@@ -1,0 +1,29 @@
+package com.sushant.samurai.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.LocalDate;
+import java.util.Date;
+
+@Setter
+@Getter
+@Entity
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String username;
+    private String password;
+    private String email;
+    private String fullName;
+    private String phone;
+    private String address;
+    private String gender;
+    private LocalDate birthday;
+
+}
