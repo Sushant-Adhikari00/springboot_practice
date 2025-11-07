@@ -10,10 +10,19 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class ApiResponse {
+public class ApiResponse<T> {
     private boolean success;
     private String message;
     private Integer statusCode;
     @JsonFormat(pattern = "yyyy-MM-dd hh:mm:s a")
-    private LocalDateTime timestamp;
+    private LocalDateTime timestamp ;
+    private T data;
+
+    public ApiResponse(boolean success, String message, Integer statusCode, LocalDateTime timestamp) {
+        this.success = success;
+        this.message = message;
+        this.statusCode = statusCode;
+        this.timestamp = timestamp;
+    }
 }
+
