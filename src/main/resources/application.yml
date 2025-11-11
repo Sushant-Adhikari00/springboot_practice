@@ -5,9 +5,9 @@ spring:
     name: SushantApp
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: 'jdbc:mysql://localhost:3306/practice_db'
-    username: root
-    password: M3ro$har37@2061
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
